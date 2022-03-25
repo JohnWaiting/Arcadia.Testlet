@@ -10,6 +10,13 @@
 
         internal Testlet(string testletId, List<Item> items, Random random)
         {
+            if (items.Count != ItemsCountInTestlet)
+            {
+                throw new ArgumentException(
+                    $"Invalid testlet items count. Should be {ItemsCountInTestlet}.",
+                    nameof(items));
+            }
+
             TestletId = testletId;
             _items = items;
             _random = random;
@@ -21,13 +28,24 @@
 
         public string TestletId { get; }
 
+
         public List<Item> Randomize()
         {
-            return new List<Item>();
-            //Items private collection has 6 Operational and 4 Pretest Items.
-            //Randomize the order of these items as per the requirement(with TDD)
-            //The assignment will be reviewed on the basis of – Tests written first, Correct
-            //logic, Well structured &clean readable code.
+            return GetRandomizedItems().ToList();
+        }
+
+        private IEnumerable<Item> GetRandomizedItems()
+        {
+            List<Item> mandatoryPretestItems = _items
+                .Where(item => item.ItemType == ItemTypeEnum.Pretest)
+                .OrderBy(item => _random.Next())
+                .Take(MandatoryFirstPretestItemsCount)
+                .ToList();
+
+            return mandatoryPretestItems
+                .Concat(_items
+                    .Except(mandatoryPretestItems)
+                    .OrderBy(x => _random.Next()));
         }
     }
 }
