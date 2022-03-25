@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcadia.Testlet", "Arcadia.Testlet\Arcadia.Testlet.csproj", "{5CB99529-AF07-4DDA-BEBE-1AF59823ADCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcadia.Testlet.Test", "Arcadia.Testlet.Test\Arcadia.Testlet.Test.csproj", "{44C2BE93-1CF6-44F7-8AB7-9FE30DBC509C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcadia.Testlet", "Arcadia.Testlet\Arcadia.Testlet.csproj", "{2A1287F1-FDED-4B42-BE7A-30969243F0DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CB99529-AF07-4DDA-BEBE-1AF59823ADCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CB99529-AF07-4DDA-BEBE-1AF59823ADCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CB99529-AF07-4DDA-BEBE-1AF59823ADCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CB99529-AF07-4DDA-BEBE-1AF59823ADCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C2BE93-1CF6-44F7-8AB7-9FE30DBC509C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C2BE93-1CF6-44F7-8AB7-9FE30DBC509C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C2BE93-1CF6-44F7-8AB7-9FE30DBC509C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C2BE93-1CF6-44F7-8AB7-9FE30DBC509C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1287F1-FDED-4B42-BE7A-30969243F0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1287F1-FDED-4B42-BE7A-30969243F0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1287F1-FDED-4B42-BE7A-30969243F0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1287F1-FDED-4B42-BE7A-30969243F0DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,8 +2,14 @@
 {
     public class Item
     {
-        public string ItemId { get; set; }
+        public Item(string itemId, ItemTypeEnum itemType)
+        {
+            ItemId = itemId;
+            ItemType = itemType;
+        }
 
-        public ItemTypeEnum ItemType { get; set; }
+        public string ItemId { get; }
+
+        public ItemTypeEnum ItemType { get; }
     }
 }
